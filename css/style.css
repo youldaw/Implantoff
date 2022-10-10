@@ -607,12 +607,111 @@ header .head-video-block .video-text span {
 
 /* Наша команда */
 
+.our-command .command-slide {
+	overflow: visible;
+	position: relative;
+}
 .our-command {
 	padding-top: 150px;
+	padding-bottom: 70px;
+	background: linear-gradient(180deg, #1E2127 0%, #303541 51.04%, #1E2127 100%);
 }
 .our-command .title {
 	margin-bottom: 65px;
 }
+.our-command .command-img {
+	position: relative;	
+}
+.our-command .command-block {
+	text-align: center;
+}
+.our-command .command-text p {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+}
+/* .our-command .command-slide .swiper-slide {
+	opacity: 0.5;
+}
+.our-command .command-slide .swiper-slide-active,
+.our-command .command-slide .swiper-slide-next,
+.our-command .command-slide .swiper-slide-next + .swiper-slide,
+.our-command .command-slide .swiper-slide-next + .swiper-slide:nth-child(6) {
+	opacity: 1;
+} */
+.our-command .swiper-button-next,
+.our-command .swiper-button-prev {
+	top: -75px;
+	bottom: auto;
+}
+.our-command .swiper-pagination {
+	bottom: auto;
+	top: -106px;
+}
+
+/* Implantoffbot */
+
+.telegram-sec {
+	padding: 60px 0 43px;
+	background-image: url('../images/telegram-sec-bg.jpg');
+	background-color: rgba(30, 33, 39, 0.7);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.telegram-sec::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, #1E2127 0%, rgba(30, 33, 39, 0) 60.94%, #1E2127 100%);
+}
+.telegram-sec::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(30, 33, 39, 0.7);
+}
+.telegram-sec .row {
+	position: relative;
+	z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
