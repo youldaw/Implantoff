@@ -47,15 +47,6 @@ button {
 	overflow: hidden;
 	background: #1E2127;
 }
-.owl-drag {
-    overflow: hidden;
-}
-.owl-item {
-    float: left;
-}
-.owl-dots {
-    display: none;
-}
 
 /* font-family: 'Corbel'; */
 p {
@@ -381,48 +372,68 @@ header .head-video-block .video-text span {
 	display: inline-block;
 	color: #639EFF;
 }
-
-.owl-nav button {
-	background: transparent;
-	border: none;
-	padding: 0;
-}
-
-.head-slide-content {
+.video-slide {
+	overflow: hidden;
 	position: relative;
-	align-items: flex-end;
 }
-.all-slide .owl-nav {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+/* ///////////////////// */
+.swiper {width: 100%;}
+.swiper-container {
+    width: 100%;
 }
-.all-slide .owl-nav .owl-prev {
-	margin-right: 65px;
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+	content: none;
 }
-.all-slide .owl-nav .owl-next {
-	margin-right: 12px;
+.swiper-pagination {
+	text-align: right;
+	padding-right: 32px;
 }
-.all-slide .slider-counter {
-	margin-right: 30px;
-}
-.slider-counter-offers,
-.slider-counter {
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
+.swiper-pagination {
 	font-weight: 100;
 	font-size: 20px;
 	line-height: 130%;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
+	width: 15%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: auto;
 }
-/* .slider-counter span.active {
-	display: inline-block;
+.swiper-pagination-total{
+	position: relative;
+}
+.swiper-pagination-total::before {
+	content: '0';
+}
+.swiper-pagination-current {
 	font-weight: 100;
 	font-size: 36px;
+	line-height: 130%;
 	letter-spacing: 0.02em;
-} */
+	color: #FFFFFF;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	top: auto;
+	bottom: -5px;
+	width: auto;
+}
+.swiper-button-prev {
+	left: auto;
+	right: 130px;
+}
+.swiper-button-next {
+	right: 0;
+}
+
+/* ///////////////////// */
+
+.head-slide-content {
+	position: relative;
+	align-items: flex-end;
+}
 
 /* Специальные предложения */
 
@@ -435,7 +446,7 @@ header .head-video-block .video-text span {
 	margin-bottom: 60px;
 }
 .special-offers .offers-slide {
-	overflow: inherit;
+	overflow: visible;
 }
 .special-offers .offers-slide-text {
 	height: 155px;
@@ -450,7 +461,7 @@ header .head-video-block .video-text span {
 .special-offers .offers-slide-img img {
 	border-radius: 5px;
 	width: 100%;
-	height: 180px;
+	height: 200px;
 }
 .special-offers .offers-slide-text {
 	margin-top: 20px;
@@ -464,39 +475,43 @@ header .head-video-block .video-text span {
 	color: #FFFFFF;
 	margin: 7px 0 20px;
 }
-.special-offers .owl-item {
+
+.special-offers .swiper-slide {
 	opacity: 0.5;
-	transition: .3s;
+	transition: .3s all ease;
 }
-.special-offers .owl-item.active {
+.special-offers .swiper-slide-prev,
+.special-offers .swiper-slide-next,
+.special-offers .swiper-slide-active {
 	opacity: 1;
 }
-.special-offers .owl-nav {
-	position: absolute;
-	right: 15px;
-	top: -90px;
-}
-.special-offers .owl-nav .owl-prev {
-	margin-right: 65px;
-}
-.offers-rov {
+.special-offers .special-offers-slide {
 	position: relative;
 }
-.special-offers .slider-counter-offers {
-	position: absolute;
-	right: 0;
-	top: -86px;
-	right: 46px;
+.special-offers .swiper-pagination {
+	bottom: auto;
+	top: -106px;
+	padding-right: 47px;
 }
+.special-offers .swiper-button-next {
+	right: 15px;
+}
+.special-offers .swiper-button-prev {
+	right: 145px;
+}
+.special-offers .swiper-button-next,
+.special-offers .swiper-button-prev {
+	bottom: auto;
+	top: -75px;
+}
+
 
 /* О КЛИНИКЕ */
 .about-clinic {
-	padding-bottom: 150px;
-}
-.about-clinic .big-img {
+	/* padding-bottom: 150px; */
 	position: relative;
 }
-.about-clinic .big-img::after {
+.about-clinic .mySwiper2::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -504,8 +519,13 @@ header .head-video-block .video-text span {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(180deg, rgba(30, 33, 39, 0) 0%, rgba(30, 33, 39, 0) 22.4%, rgba(30, 33, 39, 0) 43.23%, rgba(30, 33, 39, 0) 60.42%, rgba(30, 33, 39, 0.2) 77.6%, #1E2127 100%);
+	z-index: 2;
 }
-.about-clinic .big-img img {
+
+.about-clinic .mySwiper2 {
+	position: relative;
+}
+.about-clinic .mySwiper2 img {
 	width: 100%;
 	height: 780px;
 }
@@ -513,6 +533,9 @@ header .head-video-block .video-text span {
 	margin-top: -140px;
 	position: relative;
 	z-index: 2;
+}
+.about-clinic .about-clinic-left {
+	max-width: 538px;
 }
 .about-clinic .about-clinic-left .title {
 	margin-bottom: 22px;
@@ -528,35 +551,68 @@ header .head-video-block .video-text span {
 .about-clinic .about-clinic-text a {
 	margin-top: 3px;
 }
+.about-clinic .about-clinic-rov {
+	align-items: center;
+}
 
 
+.about-clinic .swiper-slide {
+	background-size: cover;
+	background-position: center;
+}
 
+.about-clinic .mySwiper2 {
+	height: 780px;
+	width: 100%;
+}
 
+.about-clinic .mySwiper {
+	height: 100px;
+	box-sizing: border-box;
+}
 
+.about-clinic .mySwiper .swiper-slide {
+	width: 50%;
+	height: 100%;
+	opacity: 0.7;
+}
 
+.about-clinic .mySwiper .swiper-slide-thumb-active {
+	opacity: 1;
+}
 
+.about-clinic .mini-slide-col {
+	position: relative;
+	padding-left: 50px;
+}
+.about-clinic .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.about-clinic .swiper-button-prev,
+.about-clinic .swiper-button-next {
+	width: 30px;
+	height: 30px;
+	background: #30343D;
+	border-radius: 2px;
+	bottom: 0;
+	right: auto;
+	left: 0;
+}
+.about-clinic .swiper-button-next {
+	bottom: 32px;
+}
 
+/* Наша команда */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.our-command {
+	padding-top: 150px;
+}
+.our-command .title {
+	margin-bottom: 65px;
+}
 
 
 

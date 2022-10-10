@@ -9,84 +9,63 @@ $(function (){
     
 
 
-    $('.head-slide').owlCarousel({
-        loop:true,
-        margin:0,
-        nav:true,
-        dots:false,
-        center: false,
-        smartSpeed:900,
-        items:1,
-        navText: ['<img src="images/slide-left-arrow.svg">','<img src="images/slide-right-arrow.svg">'],
-        responsive:{
-            0:{
-                items:1,
+    $(function () {
+        var swiper = new Swiper('.video-slide', {
+            loop: true,
+            slidesPerView: 1,
+            // spaceBetween: 15,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return '0' + number;
+                }
             },
-            580:{
-                items:1,
-            },
-            1000:{
-                items:1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
             }
-        }
-    });
-    $('.head-slide').on('initialized.owl.carousel changed.owl.carousel', function(e) {
-        if (!e.namespace)  {
-          return;
-        }
-        var carousel = e.relatedTarget;
-        $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + ' / ' + carousel.items().length);
-      }).owlCarousel({
-        items: 1,
-        loop:true,
-        margin:0,
-        nav:true
+        });
+
+        var swiper = new Swiper('.special-offers-slide', {
+            loop: true,
+            loopAdditionalSlides: 30,
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 85,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return '0' + number;
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+
+        var swiper = new Swiper('.command-slide', {
+            loop: true,
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 5,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return '0' + number;
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
     });
 
-    // offers-slide
-    $('.offers-slide').owlCarousel({
-        loop:true,
-        margin:100,
-        nav:true,
-        dots:false,
-        center: true,
-        smartSpeed:900,
-        items:3,
-        navText: ['<img src="images/slide-left-arrow.svg">','<img src="images/slide-right-arrow.svg">'],
-        responsive:{
-            0:{
-                items:1,
-                margin: 0,
-            },
-            580:{
-                items:2,
-                margin:30,
-            },
-            992:{
-                items:2,
-                margin:80,
-            },
-            1200:{
-                items:3,
-                margin:80,
-            },
-            1400:{
-                items:3,
-            }
-        }
-    });
-    $('.offers-slide').on('initialized.owl.carousel changed.owl.carousel', function(e) {
-        if (!e.namespace)  {
-          return;
-        }
-        var carousel = e.relatedTarget;
-        $('.slider-counter-offers').text(carousel.relative(carousel.current()) + 1 + ' / ' + carousel.items().length);
-      }).owlCarousel({
-        items: 1,
-        loop:true,
-        margin:0,
-        nav:true
-    });
 
+    
 });
 
