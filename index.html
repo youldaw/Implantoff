@@ -11,14 +11,15 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header index">
 			<span class="bg-text1">успех</span>
 			<span class="bg-text2">Улыбка</span>
 			<img src="images/ellipse-bg.svg" alt="" class="ellipse-bg">
-			<div class="container-fluid head-top-con">
+
+			<div class="container-fluid head-top-con pc">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-12 p-0">
 							<div class="head-top">
 								<p>Апарт-комплекс KleinHouse, ул. Нижняя Красносельская, 35, стр. 3, офис 33</p>
 								<p><img src="images/metro-icon-blue.svg" alt=""> Бауманская</p>
@@ -30,12 +31,22 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="container-fluid head-menu-con">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-12 p-0">
 							<nav class="navbar navbar-expand-lg">
-								<a class="navbar-brand" href="#!"><img src="images/logo.svg" alt=""></a>
+								<div class="head-nav-top">
+									<a class="navbar-brand" href="#!"><img src="images/logo.svg" alt=""></a>
+
+									<a href="#!" class="mob menu-opener">
+										<span class="one"></span>
+										<span class="two"></span>
+										<span class="three"></span>
+									</a>
+								</div>
+
 								<div class="navbar-collapse" id="navbarSupportedContent">
 									<ul class="navbar-nav">
 										<li class="nav-item">
@@ -54,8 +65,30 @@
 											<a class="nav-link" href="#">Контакты</a>
 										</li>
 									</ul>
+
+									<div class="mob">
+										<div class="mob-contact">
+											<a href="tel:" class="mob-tel">+7 (495) 925-12-73</a>
+											<a href="tel:" class="mob-tel">+7 (916) 858-97-48</a>
+											<a href="#!" class="white-btn">Запись на прием</a>
+										</div>
+										<div class="mob-info">
+											<p>Или через мессенджеры:</p>
+											<div class="mob-socials col-sm-4">
+												<a href="#!"><img src="images/mob-whatsapp.svg" alt=""></a>
+												<a href="#!"><img src="images/mob-tg.svg" alt=""></a>
+											</div>
+										</div>
+										<div class="mob-address">
+											<address>Апарт-комплекс KleinHouse, ул. Нижняя Красносельская, 35, стр. 3, офис 33</address>
+											<div class="mob-metro">
+												<p><img src="images/metro-icon-blue.svg" alt=""> Бауманская</p>
+												<p><img src="images/metro-icon-red.svg" alt=""> Красносельская</p>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="navbar-right">
+								<div class="navbar-right pc">
 									<a href="#!" class="appointment">Запись на прием</a>
 									<a href="#!" class="head-whatsapp"><img src="images/whatsapp-icon.svg" alt=""></a>
 									<a href="#!" class="head-tg"><img src="images/telegram-word-icon.svg" alt=""></a>
@@ -70,9 +103,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 head-img-col">
+							<img src="images/bg-text1.svg" alt="" class="text-img1 mob">
 							<div class="head-img">
-								<img src="images/head-img.png" alt="">
+								<img src="images/head-img.png" alt="" class="pc">
+								<img src="images/mob-girl-img.png" alt="" class="mob">
 							</div>
+							<img src="images/bg-text2.svg" alt="" class="text-img2 mob">
 						</div>
 
 						<div class="col-lg-6 head-text-col">
@@ -84,8 +120,8 @@
 								<p>Американская система Opalescence для Вашей белоснежной улыбки!</p>
 							</div>
 							<div class="head-btns">
-								<a href="#!" class="white-btn">Записаться</a>
-								<a href="#!" class="transparent-btn">Узнать больше</a>
+								<a href="#!" class="white-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться</a>
+								<a href="#!" class="transparent-btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">Узнать больше</a>
 							</div>
 						</div>
 					</div>
@@ -96,8 +132,13 @@
 								<div class="head-slide swiper-wrapper">
 									<div class="head-video-block swiper-slide">
 										<a href="#!" class="head-video">
-											<span><img src="images/head-video.png" alt=""></span>
-											<span class="play-btn"><img src="images/blue-play-btn.svg" alt=""></span>
+											<span class="video-img"><img src="images/head-video.png" alt=""></span>
+											<span class="play-btn">
+												<svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M34.6759 20.423C36.6281 21.5864 36.6281 24.4136 34.6759 25.577L20.2858 34.1532C18.2861 35.3449 15.75 33.904 15.75 31.5761L15.75 14.4239C15.75 12.096 18.2861 10.6551 20.2859 11.8468L34.6759 20.423Z" fill="#174085"/>
+													<circle cx="23.5" cy="23.5" r="21.5" stroke="#174085" stroke-width="4"/>
+												</svg>													
+											</span>
 										</a>
 										<div class="video-text">
 											<img src="images/head-video-arrow.svg" alt="">
@@ -108,8 +149,13 @@
 	
 									<div class="head-video-block swiper-slide">
 										<a href="#!" class="head-video">
-											<span><img src="images/head-video.png" alt=""></span>
-											<span class="play-btn"><img src="images/blue-play-btn.svg" alt=""></span>
+											<span class="video-img"><img src="images/head-video.png" alt=""></span>
+											<span class="play-btn">
+												<svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M34.6759 20.423C36.6281 21.5864 36.6281 24.4136 34.6759 25.577L20.2858 34.1532C18.2861 35.3449 15.75 33.904 15.75 31.5761L15.75 14.4239C15.75 12.096 18.2861 10.6551 20.2859 11.8468L34.6759 20.423Z" fill="#174085"/>
+													<circle cx="23.5" cy="23.5" r="21.5" stroke="#174085" stroke-width="4"/>
+												</svg>													
+											</span>
 										</a>
 										<div class="video-text">
 											<img src="images/head-video-arrow.svg" alt="">
@@ -121,8 +167,16 @@
 
 								<div class="swiper-pagination"></div>
 								<!-- Pagination -->
-								<div class="swiper-button-next"><img src="images/slide-right-arrow.svg" alt=""></div>
-								<div class="swiper-button-prev"><img src="images/slide-left-arrow.svg" alt=""></div>
+								<div class="swiper-button-next">
+									<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.59909 1L11 5L6.59909 9M10.4378 5.14175L1 5.14175" stroke="#639EFF" stroke-linecap="round"/>
+									</svg>
+								</div>
+								<div class="swiper-button-prev">
+									<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.60136 1L1 7L7.60136 13M1.84329 7.21263L16 7.21263" stroke="#639EFF" stroke-linecap="round"/>
+									</svg>
+								</div>
 								<!-- Arrows -->
 							</div>
 						</div>
@@ -198,13 +252,24 @@
 								</div>
 							</div>
 						</div>
+						<!-- <div class="col-lg-12 show-all mob">
+							<a href="#!" class="transparent-btn">Загрузить еще</a>
+						</div> -->
 					</div>
                 </div>
             </section>
 
 			<section class="about-clinic">
-
-				<div class="swiper-container gallery-top mySwiper2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 mob">
+							<div class="title">
+								<h2>О клинике</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-container mySwiper2">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<img src="images/about-big-img1.jpg" />
@@ -239,9 +304,9 @@
 				<div class="container-fluid">
 					<div class="container">
 						<div class="row about-clinic-rov">
-							<div class="col-lg-6">
+							<div class="col-lg-6 about-clinic-text-col">
 								<div class="about-clinic-left">
-									<div class="title">
+									<div class="title pc">
 										<h2>О клинике</h2>
 									</div>
 									<div class="about-clinic-text">
@@ -253,7 +318,7 @@
 							</div>
 	
 							<div class="col-lg-6 mini-slide-col">
-								<div class="swiper-container gallery-thumbs mySwiper">
+								<div class="swiper-container mySwiper">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<img src="images/about-big-img1.jpg" />
@@ -303,8 +368,16 @@
 					<div class="swiper-container slider3 command-slide">
 						<div class="swiper-pagination"></div>
 						<!-- Pagination -->
-						<div class="swiper-button-next4"><img src="images/slide-right-arrow.svg" alt=""></div>
-						<div class="swiper-button-prev4"><img src="images/slide-left-arrow.svg" alt=""></div>
+						<div class="swiper-button-next4">
+							<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.39864 1L16 7L9.39864 13M15.1567 7.21263L1 7.21263" stroke="#639EFF" stroke-linecap="round"/>
+							</svg>
+						</div>
+						<div class="swiper-button-prev4">
+							<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.60136 1L1 7L7.60136 13M1.84329 7.21263L16 7.21263" stroke="#639EFF" stroke-linecap="round"/>
+							</svg>
+						</div>
 						<!-- Arrows -->
 
 						<div class="swiper-wrapper">
@@ -415,7 +488,7 @@
 			<section class="telegram-sec">
 				<div class="container">
 					<div class="row tg-rov">
-						<div class="col-lg-3">
+						<div class="col-lg-3 tg-col">
 							<div class="tg-img">
 								<img src="images/tel-img.png" alt="">
 							</div>
@@ -559,14 +632,19 @@
 
 			<section class="how-we-working">
 				<div class="container-fluid how-con">
-					<div class="right-img position-img">
+					<div class="right-img position-img pc">
 						<img src="images/how-we-work-img1.jpg" alt="">
 					</div>
 
 					<div class="container">
+						<div class="row">
+							<div class="title mob">
+								<h2>Как мы работаем</h2>
+							</div>
+						</div>
 						<div class="row align-items-center how-rov">
-							<div class="col-lg-7">
-								<div class="title">
+							<div class="col-lg-7 col-sm-8 how-col-text">
+								<div class="title pc">
 									<h2>Как мы работаем</h2>
 								</div>
 								<div class="how-we-working-block">
@@ -578,24 +656,24 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-5">
-								<!-- <img src="images/how-we-work-img1.jpg" alt=""> -->
+							<div class="col-lg-5 col-sm-4 how-col-img">
+								<img src="images/mob-work-img1.jpg" alt="" class="mob">
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="container-fluid how-con for-mar">
-					<div class="left-img position-img">
+					<div class="left-img position-img pc">
 						<img src="images/how-we-work-img2.jpg" alt="">
 					</div>
 					
 					<div class="container">
 						<div class="row align-items-center how-rov">
-							<div class="col-lg-5">
-								<!-- <img src="images/how-we-work-img1.jpg" alt=""> -->
+							<div class="col-lg-5 col-sm-4 how-col-img">
+								<img src="images/mob-work-img2.jpg" alt="" class="mob">
 							</div>
-							<div class="col-lg-7">
+							<div class="col-lg-7 col-sm-8 how-col-text">
 								<div class="how-we-working-block">
 									<span class="line"></span>
 									<div class="how-we-working-text">
@@ -610,13 +688,13 @@
 				</div>
 
 				<div class="container-fluid how-con for-mar">
-					<div class="right-img position-img">
+					<div class="right-img position-img pc">
 						<img src="images/how-we-work-img3.jpg" alt="">
 					</div>
 					
 					<div class="container">
 						<div class="row align-items-center how-rov">
-							<div class="col-lg-7">
+							<div class="col-lg-7 col-sm-8 how-col-text">
 								<div class="how-we-working-block">
 									<span class="line"></span>
 									<div class="how-we-working-text">
@@ -627,24 +705,24 @@
 								</div>
 							</div>
 
-							<div class="col-lg-5">
-								<!-- <img src="images/how-we-work-img1.jpg" alt=""> -->
+							<div class="col-lg-5 col-sm-4 how-col-img">
+								<img src="images/mob-work-img3.jpg" alt="" class="mob">
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="container-fluid how-con for-mar">
-					<div class="left-img position-img">
+					<div class="left-img position-img pc">
 						<img src="images/how-we-work-img4.jpg" alt="">
 					</div>
 					
 					<div class="container">
 						<div class="row align-items-center how-rov">
-							<div class="col-lg-5">
-								<!-- <img src="images/how-we-work-img1.jpg" alt=""> -->
+							<div class="col-lg-5 col-sm-4 how-col-img">
+								<img src="images/mob-work-img4.jpg" alt="" class="mob">
 							</div>
-							<div class="col-lg-7">
+							<div class="col-lg-7 col-sm-8 how-col-text">
 								<div class="how-we-working-block">
 									<span class="line"></span>
 									<div class="how-we-working-text">
@@ -660,8 +738,17 @@
 			</section>
 
 			<section class="about-us">
-
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 mob">
+							<div class="title">
+								<h2>О нас говорят</h2>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="swiper-container gallery-top2">
+					<img src="images/mob-slide-arrow.svg" alt="" class="mob mob-arrow">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="about-us-big">
@@ -772,19 +859,29 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-lg-6 mob">
+						<div class="about-us-clinic-left">
+							
+							<div class="about-us-clinic-text">
+								<h5>Ольга Адаменко</h5>
+								<p>Я узнала о Клинике 4 года назад от знакомой, которая порекомендовала поставить пломбу у Александра Соколова. Начало было – пломба, а завершающий этап – 7 имплантов, 4 коронки (или даже больше)...</p>
+								<a href="#!" class="more-btn">Подробнее <img src="images/links-arrow.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				
-				<div class="container-fluid">
+				<div class="container-fluid about-us-con">
 					<div class="container">
 						<div class="row about-us-clinic-rov">
-							<div class="col-lg-6">
+							<div class="col-lg-6 pc">
 								<div class="about-us-clinic-left">
 									<div class="title">
-										<h2>О клинике</h2>
+										<h2>О нас говорят</h2>
 									</div>
 									<div class="about-us-clinic-text">
-										<p>Главная сфера нашей деятельности – стоматология, где мы как команда профессионалов реализуем желание делать людей красивыми и здоровыми. Мы любим то, что мы делаем, - и это одна из главных составляющих нашего успеха.</p>
-										<p>Мы знаем, что красивая улыбка влияет на качество жизни и хотим, чтобы как можно больше людей имели возможность улыбаться красиво и жить лучше!</p>
+										<h5>Ольга Адаменко</h5>
+										<p>Я узнала о Клинике 4 года назад от знакомой, которая порекомендовала поставить пломбу у Александра Соколова. Начало было – пломба, а завершающий этап – 7 имплантов, 4 коронки (или даже больше)...</p>
 										<a href="#!" class="more-btn">Подробнее <img src="images/links-arrow.svg" alt=""></a>
 									</div>
 								</div>
@@ -870,9 +967,14 @@
 									</div>
 								</div>
 							</div>
+							<div class="mob">
+								<div class="contact-bg-img">
+									<img src="images/contact-bg.jpg" alt="">
+								</div>
+							</div>
 						</div>
 
-						<div class="col-lg-7">
+						<div class="col-lg-7 contact-col">
 							<div class="contact-map">
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.996133499265!2d37.670166315721474!3d55.77593899767507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b535fd9fb2aac5%3A0x9e625a0097f49496!2z0JbQmiBLbGVpbiBIb3VzZQ!5e0!3m2!1sru!2s!4v1665504987521!5m2!1sru!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
@@ -889,7 +991,7 @@
 								<h3>Независимые рейтинги</h3>
 							</div>
 						</div>
-						<div class="col-lg-2">
+						<div class="col-lg-2 col-6">
 							<div class="rating-block">
 								<div class="rating-logo">
 									<img src="images/yandex-logo.svg" alt="">
@@ -902,7 +1004,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-2">
+						<div class="col-lg-2 col-6">
 							<div class="rating-block">
 								<div class="rating-logo">
 									<img src="images/zoon-logo.svg" alt="">
@@ -915,8 +1017,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-3">
-							<div class="rating-block">
+						<div class="col-lg-3 col-12">
+							<div class="rating-block last">
 								<div class="rating-logo">
 									<img src="images/prodoktorov-logo.svg" alt="">
 								</div>
@@ -951,6 +1053,12 @@
 							<p>© 2022. Все права защищены</p>
 							<a href="#!">Политка обработки персональных данных</a>
 							<p>Лицензия №ЛО-77-01-020757 от 24 ноября 2020г.</p>
+
+							<div class="mob">
+								<div class="mob-ftr-btn">
+									<a href="#!" class="white-btn"><img src="images/ftr-btn-whatsap.svg" alt=""> записаться онлайн</a>
+								</div>
+							</div>
 						</div>
 
 						<div class="ftr-menu one">
@@ -992,6 +1100,143 @@
 			</div>
 		</footer>
 	</div>
+
+	<!-- Button trigger modal -->
+	<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+		Launch demo modal
+	</button> -->
+	
+	<!-- Modal priem -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Запишитесь на примерку улыбки</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#!" id="priem-form">
+						<div class="form-group">
+							<input type="text" id="name" name="name" placeholder="имя" required>
+						</div>
+						<div class="form-group">
+							<input type="tel" id="phone" name="phone" placeholder="телефон" required>
+						</div>
+						<button type="submit" class="white-btn">записаться</button>
+						<p>Отправляя свои данные, я соглашаюсь с Политикой Конфиденциальности</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal priem thanks -->
+	<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Запишитесь на примерку улыбки</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="thanks-text">Спасибо! Мы перезвоним Вам в ближайшее рабочее время!</p>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- Modal priem Error -->
+	<!-- <div class="modal fade priem-error" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Запишитесь на примерку улыбки</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#!" id="priem-form">
+						<div class="form-group">
+							<input type="text" id="name" name="name" placeholder="Иннокентий">
+						</div>
+						<div class="form-group">
+							<input type="tel" id="phone" name="phone" placeholder="абв" class="error-input">
+						</div>
+						<button type="submit" class="white-btn error" disabled="disabled">ошибка</button>
+						<p>Отправляя свои данные, я соглашаюсь с Политикой Конфиденциальности</p>
+						<p class="error">Поля заполнены неверно. Пожалуйста, повторите попытку еще раз.</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- ================== konsultatsiya modal ======================= -->
+
+
+	<!-- Modal priem -->
+	<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Запишитесь на бесплатную консультацию</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#!" id="priem-form">
+						<div class="form-group">
+							<input type="text" id="name" name="name" placeholder="имя" required>
+						</div>
+						<div class="form-group">
+							<input type="tel" id="phone" name="phone" placeholder="телефон" required>
+						</div>
+						<button type="submit" class="white-btn">записаться</button>
+						<p>Отправляя свои данные, я соглашаюсь с Политикой Конфиденциальности</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal konsultatsiya thanks -->
+	<!-- <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Запишитесь на бесплатную консультацию</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="thanks-text">Спасибо! Мы перезвоним Вам в ближайшее рабочее время!</p>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- Modal priem Error -->
+	<!-- <div class="modal fade priem-error" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Запишитесь на бесплатную консультацию</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#!" id="priem-form">
+						<div class="form-group">
+							<input type="text" id="name" name="name" placeholder="Иннокентий">
+						</div>
+						<div class="form-group">
+							<input type="tel" id="phone" name="phone" placeholder="абв" class="error-input">
+						</div>
+						<button type="submit" class="white-btn error" disabled="disabled">ошибка</button>
+						<p>Отправляя свои данные, я соглашаюсь с Политикой Конфиденциальности</p>
+						<p class="error">Поля заполнены неверно. Пожалуйста, повторите попытку еще раз.</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> -->
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
