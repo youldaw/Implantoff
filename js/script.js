@@ -29,32 +29,6 @@ $(function (){
             }
         });
 
-        // var swiper3 = new Swiper('.special-offers-slide', {
-        //     loop: true,
-        //     loopAdditionalSlides: 30,
-        //     slidesPerView: 3,
-        //     centeredSlides: true,
-        //     spaceBetween: 85,
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         type: 'fraction',
-        //         formatFractionCurrent: function (number) {
-        //             return '0' + number;
-        //         }
-        //     },
-        //     navigation: {
-        //         nextEl: '.swiper-button-next2',
-        //         prevEl: '.swiper-button-prev2'
-        //     },
-        //     breakpoints: {
-        //         500: {
-        //           slidesPerView: 1
-        //         },
-        //         700: {
-        //           slidesPerView: 1.5
-        //         }
-        //     }
-        // });
 
         const swiper3 = new Swiper('.special-offers-slide', {
             // Default parameters
@@ -106,7 +80,6 @@ $(function (){
         var mySwiper = new Swiper(".mySwiper", {
           spaceBetween: 20,
           slidesPerView: 3,
-          freeMode: true,
           watchSlidesProgress: true,
           // Responsive breakpoints
           breakpoints: {
@@ -146,6 +119,8 @@ $(function (){
             loop: true,
             slidesPerView: 4,
             // centeredSlides: true,
+            keyingiSlideMessage: 'keyingi-slide',
+            watchSlidesVisibility: true,
             spaceBetween: 2,
             pagination: {
                 el: '.swiper-pagination',
@@ -225,37 +200,34 @@ $(function (){
         var galleryThumbs = new Swiper(".gallery-thumbs2", {
             spaceBetween: 20,
             slidesPerView: 3,
-            freeMode: true,
-            watchSlidesProgress: true,
+            slideToClickedSlide:true,
+            allowTouchMove: true,
+            simulateTouch: true,
             breakpoints: {
                 320: {
                   slidesPerView: 1.6,
-                  loop: true,
-                  freeMode: false,
-                  centeredSlides: true
+                  centeredSlides: true,
+                  loop: true
                 },
                 375: {
                     slidesPerView: 2,
-                    loop: true,
-                    freeMode: false,
-                    centeredSlides: true
+                    centeredSlides: true,
+                    loop: true
                   },
                 // when window width is >= 480px
                 480: {
                   slidesPerView: 2.4,
-                  loop: true,
-                  freeMode: false,
-                  centeredSlides: true
+                  centeredSlides: true,
+                  loop: true
                 },
                 768: {
                     slidesPerView: 2,
-                    loop: true,
-                    freeMode: true,
-                    centeredSlides: true
+                    centeredSlides: true,
+                    loop: true
                   },
                 // when window width is >= 640px
                 992: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                 }
             },
         });
@@ -274,8 +246,6 @@ $(function (){
         var thumbAbout = new Swiper(".gallery-thumbs-about", {
             spaceBetween: 20,
             slidesPerView: 6,
-            freeMode: true,
-            watchSlidesProgress: true,
             breakpoints: {
               320: {
                 slidesPerView: 1.8,
@@ -293,11 +263,15 @@ $(function (){
                 loop: true,
                 spaceBetween: 10
               },
-              // when window width is >= 640px
               768: {
+                slidesPerView: 4,
                 loop: true,
-                slidesPerView: 3,
-                centeredSlides: true,
+                spaceBetween: 10
+              },
+              // when window width is >= 640px
+              992: {
+                loop: true,
+                slidesPerView: 6,
                 spaceBetween: 10
               }
             },

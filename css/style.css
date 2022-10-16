@@ -157,23 +157,10 @@ h6 {
 
 header {
 	position: relative;
-	padding-bottom: 40px;
 	background-color: #1E2127;
 	z-index: 2;
 	overflow: hidden;
 }
-header::after {
-	content: "";
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 500px;
-	background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(30, 33, 39, 0) 0.01%, #1E2127 93.89%);
-	z-index: 2;
-}
-
 .ellipse-bg {
 	position: absolute;
 	left: 80px;
@@ -192,16 +179,16 @@ header::after {
 	z-index: 3;
 }
 .bg-text1 {
-	font-size: 80px;
+	font-size: 70px;
 	position: absolute;
-	top: 225px;
-	left: 10px;
+	top: 128px;
+	left: 17px;
 }
 .bg-text2 {
 	font-size: 100px;
 	position: absolute;
-	bottom: 130px;
-	left: 44%;
+	bottom: 80px;
+	left: 40%;
 }
 header .head-text-col,
 header .video-rov,
@@ -393,9 +380,28 @@ header .head-video-block .video-text span {
 	display: inline-block;
 	color: #639EFF;
 }
-.video-slide {
-	overflow: hidden;
+
+header.about-header {
 	position: relative;
+}
+header.about-header::after,
+header .head-img-col::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(30, 33, 39, 0) 0.01%, #1E2127 93.89%);
+	z-index: 2;
+}
+header .head-img-col {
+	padding-bottom: 40px;
+}
+.head-slide-rov {
+	position: relative;
+	overflow: hidden;
 }
 /* header about page */
 header.about-header {
@@ -411,6 +417,16 @@ header.about-header::after {
 }
 header.about-header .head-menu-con {
 	background: rgba(0, 0, 0, 0.8);
+}
+header .video-slide {
+	position: relative;
+	overflow: hidden;
+}
+header .swiper-slider {
+	opacity: 0;
+}
+header .swiper-slider-active {
+	opacity: 1;
 }
 /* ///////////////////// */
 .swiper {width: 100%;}
@@ -689,15 +705,16 @@ header.about-header .head-menu-con {
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
 }
-/* .our-command .command-slide .swiper-slide {
+.our-command .command-slide .swiper-slide {
 	opacity: 0.5;
 }
+.our-command .command-slide .swiper-slide-next + .swiper-slide,
 .our-command .command-slide .swiper-slide-active,
 .our-command .command-slide .swiper-slide-next,
-.our-command .command-slide .swiper-slide-next + .swiper-slide,
-.our-command .command-slide .swiper-slide-next + .swiper-slide:nth-child(6) {
+.our-command .command-slide .swiper-slide-next + .swiper-slide + .swiper-slide {
 	opacity: 1;
-} */
+}
+
 .our-command .swiper-button-next4,
 .our-command .swiper-button-prev4 {
 	width: auto;
@@ -1316,6 +1333,9 @@ header.about-header .head-menu-con {
 	cursor: pointer;
 	height: 100px;
 }
+.gallery-thumbs-about {
+	overflow: hidden;
+}
 .about-clinic .gallery-top-about {
 	position: relative;
 }
@@ -1448,6 +1468,16 @@ header.about-header .head-menu-con {
 	padding-top: 50px;
 	position: relative;
 }
+.keys-slide .swiper-slide {
+	opacity: 0.5;
+}
+.keys-slide .swiper-slide-next + .swiper-slide,
+.keys-slide .swiper-slide-active,
+.keys-slide .swiper-slide-next,
+.keys-slide .swiper-slide-next + .swiper-slide + .swiper-slide {
+	opacity: 1;
+}
+
 .keys-sec .keys-block {
 	text-align: center;
 }
@@ -1691,6 +1721,28 @@ footer .ftr-socials a:hover {
 @media only screen and (max-width: 768px){
 	.pc {display: none;}
 	.mob {display: block;}
+
+	.about-clinic.second .mini-slide-col {
+		padding: 0;
+	}
+	header .head-img-col {
+		order: 2;
+		padding-bottom: 0;
+		position: unset;
+		overflow: visible;
+	}
+	header .head-img-col::before {
+		height: 270px;
+		width: 107%;
+	}
+	header .video-slide {
+		overflow: visible;
+	}
+	header .video-slide .col-lg-6,
+	header .video-slide .container,
+	header .video-slide .col-lg-12 {
+		padding: 0;
+	}
 	header .navbar .navbar-brand {
 		margin-right: 0;
 	}
@@ -1873,26 +1925,22 @@ footer .ftr-socials a:hover {
 		order: 1;
 		padding: 0;
 	}
-	header .head-img-col {
-		order: 2;
-		position: relative;
-	}
 	header .head-img-col .text-img1 {
 		position: absolute;
 		left: 20px;
-		top: 80px;
+		top: 430px;
 	}
 	header .head-img-col .text-img2 {
 		position: absolute;
 		bottom: 97px;
-		right: -27px;
+		right: 20px;
 		z-index: 13;
 	}
 	header .head-img img {
 		position: relative;
 		left: 0;
 		top: -6px;
-		width: 107%;
+		width: 100%;
 	}
 	header .head-img img.pc,
 	header .head-video span.video-img,
